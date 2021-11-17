@@ -30,3 +30,7 @@ https://user-images.githubusercontent.com/5770480/142238198-7ffdce35-78bd-4627-8
 ### iOS14
 
 https://user-images.githubusercontent.com/5770480/142238266-ac108538-1b54-47b3-aa51-e954635fa6ff.mp4
+
+## References
+- [iOS15 で UISearchController を利用する時の注意点](https://zenn.dev/ykws/articles/ios15-search-controller)
+- [UISearchControllerのインクリメンタルサーチをよりインクリメンタルにする](https://qiita.com/temoki/items/a2453995615752f8f52d)
