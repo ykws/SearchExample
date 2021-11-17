@@ -1,4 +1,9 @@
 # iOS Search Example
+
+[![Xcode - Build and Analyze](https://github.com/ykws/SearchExample/actions/workflows/xcode-build.yml/badge.svg)](https://github.com/ykws/SearchExample/actions/workflows/xcode-build.yml)
+[![macOS](https://img.shields.io/badge/macOS-BigSur-black)](https://developer.apple.com/macos/)
+[![Xcode](https://img.shields.io/badge/Xcode-13.1-blue.svg)](https://developer.apple.com/xcode)
+
 It is an iOS Search Example App that allows you to change the properties of the settings and can check that UISearchController indicating wheter the underlying content is obscured during a search.
 
 ## Properties of the settings
