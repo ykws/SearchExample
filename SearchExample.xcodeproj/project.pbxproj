@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		086F35F127453C380001C126 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086F35F027453C380001C126 /* SettingsViewController.swift */; };
+		086F35F527453FB80001C126 /* SettingsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086F35F427453FB80001C126 /* SettingsItem.swift */; };
+		086F35F92745428D0001C126 /* SettingsItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086F35F82745428D0001C126 /* SettingsItemStore.swift */; };
 		87BA90E32744DD8400C7021D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BA90E22744DD8400C7021D /* AppDelegate.swift */; };
 		87BA90E52744DD8400C7021D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BA90E42744DD8400C7021D /* SceneDelegate.swift */; };
 		87BA90E72744DD8400C7021D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BA90E62744DD8400C7021D /* ViewController.swift */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		086F35F027453C380001C126 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		086F35F427453FB80001C126 /* SettingsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItem.swift; sourceTree = "<group>"; };
+		086F35F82745428D0001C126 /* SettingsItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItemStore.swift; sourceTree = "<group>"; };
 		87BA90DF2744DD8400C7021D /* SearchExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87BA90E22744DD8400C7021D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87BA90E42744DD8400C7021D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +45,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		086F35F6274542160001C126 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				086F35F427453FB80001C126 /* SettingsItem.swift */,
+				086F35F82745428D0001C126 /* SettingsItemStore.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		086F35F7274542280001C126 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				87BA90E62744DD8400C7021D /* ViewController.swift */,
+				87BA90F62744E53A00C7021D /* ResultViewController.swift */,
+				086F35F027453C380001C126 /* SettingsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		87BA90D62744DD8400C7021D = {
 			isa = PBXGroup;
 			children = (
@@ -58,10 +83,10 @@
 		87BA90E12744DD8400C7021D /* SearchExample */ = {
 			isa = PBXGroup;
 			children = (
+				086F35F6274542160001C126 /* Model */,
+				086F35F7274542280001C126 /* View */,
 				87BA90E22744DD8400C7021D /* AppDelegate.swift */,
 				87BA90E42744DD8400C7021D /* SceneDelegate.swift */,
-				87BA90E62744DD8400C7021D /* ViewController.swift */,
-				87BA90F62744E53A00C7021D /* ResultViewController.swift */,
 				87BA90E82744DD8400C7021D /* Main.storyboard */,
 				87BA90EB2744DD8600C7021D /* Assets.xcassets */,
 				87BA90ED2744DD8600C7021D /* LaunchScreen.storyboard */,
@@ -143,7 +168,10 @@
 			files = (
 				87BA90E72744DD8400C7021D /* ViewController.swift in Sources */,
 				87BA90E32744DD8400C7021D /* AppDelegate.swift in Sources */,
+				086F35F527453FB80001C126 /* SettingsItem.swift in Sources */,
 				87BA90E52744DD8400C7021D /* SceneDelegate.swift in Sources */,
+				086F35F92745428D0001C126 /* SettingsItemStore.swift in Sources */,
+				086F35F127453C380001C126 /* SettingsViewController.swift in Sources */,
 				87BA90F72744E53A00C7021D /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

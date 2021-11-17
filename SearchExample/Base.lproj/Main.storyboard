@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Search Example-->
         <scene sceneID="kFY-2i-5DD">
             <objects>
                 <tableViewController id="N9W-UK-g6l" customClass="ViewController" customModule="SearchExample" customModuleProvider="target" sceneMemberID="viewController">
@@ -31,7 +31,13 @@
                             <outlet property="delegate" destination="N9W-UK-g6l" id="Q96-BQ-k5K"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="ewW-37-nXX"/>
+                    <navigationItem key="navigationItem" title="Search Example" id="ewW-37-nXX">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="NqY-as-z7X">
+                            <connections>
+                                <segue destination="isM-bc-cHa" kind="show" id="Qwt-Qr-RWh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Rw-fK-8N6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -52,6 +58,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0GH-1c-smD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1659" y="-62"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="9BZ-35-zDu">
+            <objects>
+                <tableViewController id="isM-bc-cHa" customClass="SettingsViewController" customModule="SearchExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="6GW-lb-i7w">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsCell" textLabel="kVI-Cj-xb3" detailTextLabel="MVf-CK-mgx" style="IBUITableViewCellStyleSubtitle" id="Che-cY-Suy">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Che-cY-Suy" id="9RS-yt-xId">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kVI-Cj-xb3">
+                                            <rect key="frame" x="20" y="6" width="25" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MVf-CK-mgx">
+                                            <rect key="frame" x="20" y="22.5" width="40.5" height="13.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="isM-bc-cHa" id="gIl-27-Ss8"/>
+                            <outlet property="delegate" destination="isM-bc-cHa" id="Bph-Ec-9dD"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="wZH-lD-jI1"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ENp-Mz-Hvu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-52.173913043478265" y="-62.276785714285708"/>
         </scene>
     </scenes>
     <resources>

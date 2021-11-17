@@ -15,9 +15,11 @@ class ViewController: UITableViewController {
         "C#",
         "Objective-C",
         "Java",
+        "JavaScript",
         "Perl",
         "PHP",
         "Ruby",
+        "Rust",
         "Python",
         "Go",
         "Swift",
@@ -34,18 +36,39 @@ class ViewController: UITableViewController {
         
         resultController = ResultViewController()
         
-        searchController = UISearchController(searchResultsController: resultController)
+        navigationItem.hidesSearchBarWhenScrolling = false
         
-        // iOS15未満ではデフォルトで true
-        searchController.obscuresBackgroundDuringPresentation = true
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        searchController = UISearchController(searchResultsController: resultController)
         
         searchController.hidesNavigationBarDuringPresentation = true
         searchController.searchResultsUpdater = self
         
-        navigationItem.hidesSearchBarWhenScrolling = false
-        navigationItem.searchController = searchController
+        if let obscuresBackgroundDuringPresentation = SettingsItemStore.shared.valueOf("obscuresBackgroundDuringPresentation") {
+            searchController.obscuresBackgroundDuringPresentation = obscuresBackgroundDuringPresentation
+        }
+       
+        //
+        // Dare to use deprecated property
+        // If support iOS12 and earlier, the following code.
+        //
+        // if #available(iOS 13.0, *) {
+        //     searchController.obscuresBackgroundDuringPresentation = false
+        // } else {
+        //     searchController.dimsBackgroundDuringPresentation = false
+        // }
+        //
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        if let dimsBackgroundDuringPresentation = SettingsItemStore.shared.valueOf("dimsBackgroundDuringPresentation") {
+            searchController.dimsBackgroundDuringPresentation = dimsBackgroundDuringPresentation
+        }
+       
+        navigationItem.searchController = searchController
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
